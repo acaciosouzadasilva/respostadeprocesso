@@ -12,6 +12,38 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+//inicio do script para instalar o app no pc/smartphone
+
+// Verifica se o navegador suporta a instalação de PWAs
+if ('serviceWorker' in navigator && 'Notification' in window && 'appInstallPrompt' in window) {
+  // Escuta o evento "beforeinstallprompt" para exibir a mensagem de instalação
+  window.addEventListener('beforeinstallprompt', function(event) {
+    event.preventDefault(); // Evita que a mensagem de instalação padrão seja exibida pelo navegador
+    window.appInstallPrompt = event; // Armazena o evento em uma variável global para uso posterior
+
+    // Exibe a mensagem de instalação personalizada, pode ser um banner, botão ou outra forma de prompt
+    const installButton = document.getElementById('install-button');
+
+    installButton.style.display = 'block'; // Exibe o botão ou banner de instalação
+
+    installButton.addEventListener('click', function() {
+      installButton.style.display = 'none'; // Esconde o botão ou banner de instalação
+      // Solicita a instalação do PWA
+      window.appInstallPrompt.prompt();
+      // Escuta o resultado da solicitação
+      window.appInstallPrompt.userChoice.then(function(choiceResult) {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('O PWA foi instalado com sucesso.');
+        } else {
+          console.log('O PWA não foi instalado.');
+        }
+        // Limpa a variável global após a solicitação
+        window.appInstallPrompt = null;
+      });
+    });
+  });
+}
+//inicio do script para instalar o app no pc/smartphone
 
 const greetingMessage = () => {
     //let h = new Date().toLocaleTimeString('pt-BR', { hour: 'numeric', hour12: false });
