@@ -18,6 +18,7 @@ if ('serviceWorker' in navigator) {
 if ('serviceWorker' in navigator && 'Notification' in window && 'appInstallPrompt' in window) {
   // Escuta o evento "beforeinstallprompt" para exibir a mensagem de instalação
   window.addEventListener('beforeinstallprompt', function(event) {
+    alert("hello world!");
     event.preventDefault(); // Evita que a mensagem de instalação padrão seja exibida pelo navegador
     window.appInstallPrompt = event; // Armazena o evento em uma variável global para uso posterior
 
