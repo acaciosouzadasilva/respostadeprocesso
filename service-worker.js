@@ -6,7 +6,7 @@ self.addEventListener('install', function(event) {
             './app.js',
             './style.css',
             './index.html',
-              'service-worker.js'
+              './service-worker.js'
           ]);
         })
     );
