@@ -62,14 +62,14 @@ const btnIndf = document.querySelector("#indeferido");
 btnDef.addEventListener("click",()=>{
     let tel = document.querySelector("#celular").value;
     let proc = document.querySelector("#processo").value;
-    window.open("https://wa.me/+55"+tel+"/?text=Prezado(a), "+greetingMessage()+"%2c+%0d%0a%0d%0aSeu+processo+*"+proc+"*+foi+deferido+e+encontra-se+dispon%c3%advel+para+dar+ci%c3%aancia+no+setor+de+processos.%0d%0a%0d%0aDe+*Seg*+%c3%a0+*Sex*+das+*08%3a30*+%c3%a0+*16%3a30*.%0d%0aPara informações: *4788-5413*","resposta de processo","_blank");
+    window.open("https://wa.me/+55"+tel+"/?text=Prezado(a), "+greetingMessage()+"%2c+%0d%0a%0d%0aSeu+processo+*"+proc+"*+encontra-se+dispon%c3%advel+para+dar+ci%c3%aancia+no+setor+de+processos.%0d%0a%0d%0aDe+*Seg*+%c3%a0+*Sex*+das+*08%3a30*+%c3%a0+*16%3a30*.%0d%0aPara informações: *4788-5413*","resposta de processo","_blank");
 
 });
 
 btnIndf.addEventListener("click",()=>{
   let tel = document.querySelector("#celular").value;
   let proc = document.querySelector("#processo").value;
-  window.open("https://wa.me/+55"+tel+"/?text=Prezado(a), "+greetingMessage()+"%2c+%0d%0a%0d%0aSeu+processo+*"+proc+"*+foi+indeferido+e+encontra-se+dispon%c3%advel+para+dar+ci%c3%aancia+no+setor+de+processos.%0d%0a%0d%0aDe+*Seg*+%c3%a0+*Sex*+das+*08%3a30*+%c3%a0+*16%3a30*.%0d%0aPara informações: *4788-5413*","resposta de processo","_blank");
+  window.open("https://wa.me/+55"+tel+"/?text=Prezado(a), "+greetingMessage()+"%2c+%0d%0a%0d%0aSeu+processo+*"+proc+"*+encontra-se+dispon%c3%advel+para+dar+ci%c3%aancia+no+setor+de+processos.%0d%0a%0d%0aDe+*Seg*+%c3%a0+*Sex*+das+*08%3a30*+%c3%a0+*16%3a30*.%0d%0aPara informações: *4788-5413*","resposta de processo","_blank");
 
 });
 
